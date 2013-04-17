@@ -23,6 +23,8 @@
 		F904F7BE171F1EF0000AE627 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F904F799171F1EF0000AE627 /* Foundation.framework */; };
 		F904F7C6171F1EF0000AE627 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F904F7C4171F1EF0000AE627 /* InfoPlist.strings */; };
 		F904F7C9171F1EF0000AE627 /* ShrekTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F7C8171F1EF0000AE627 /* ShrekTests.m */; };
+		F904F7D4171F1F83000AE627 /* ShrekModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F7D3171F1F83000AE627 /* ShrekModel.m */; };
+		F904F7D5171F1F83000AE627 /* ShrekModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F7D3171F1F83000AE627 /* ShrekModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		F904F7C5171F1EF0000AE627 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F904F7C7171F1EF0000AE627 /* ShrekTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShrekTests.h; sourceTree = "<group>"; };
 		F904F7C8171F1EF0000AE627 /* ShrekTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShrekTests.m; sourceTree = "<group>"; };
+		F904F7D2171F1F83000AE627 /* ShrekModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShrekModel.h; sourceTree = "<group>"; };
+		F904F7D3171F1F83000AE627 /* ShrekModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShrekModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				F904F7AF171F1EF0000AE627 /* ShrekViewController.h */,
 				F904F7B0171F1EF0000AE627 /* ShrekViewController.m */,
 				F904F7B2171F1EF0000AE627 /* ShrekViewController.xib */,
+				F904F7D2171F1F83000AE627 /* ShrekModel.h */,
+				F904F7D3171F1F83000AE627 /* ShrekModel.m */,
 				F904F79E171F1EF0000AE627 /* Supporting Files */,
 			);
 			path = Shrek;
@@ -274,6 +280,7 @@
 				F904F7A4171F1EF0000AE627 /* main.m in Sources */,
 				F904F7A8171F1EF0000AE627 /* ShrekAppDelegate.m in Sources */,
 				F904F7B1171F1EF0000AE627 /* ShrekViewController.m in Sources */,
+				F904F7D4171F1F83000AE627 /* ShrekModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F904F7C9171F1EF0000AE627 /* ShrekTests.m in Sources */,
+				F904F7D5171F1F83000AE627 /* ShrekModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +462,7 @@
 				F904F7CE171F1EF0000AE627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F904F7CF171F1EF0000AE627 /* Build configuration list for PBXNativeTarget "ShrekTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +471,7 @@
 				F904F7D1171F1EF0000AE627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
