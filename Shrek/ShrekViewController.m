@@ -8,6 +8,8 @@
 
 #import "ShrekViewController.h"
 #import "ShrekModel.h"
+#import "UIImageView+AFNetworking.h"
+#import "ShrekTableViewCell.h"
 
 static NSString * const kDealCellId = @"dealCell";
 
@@ -50,17 +52,25 @@ static NSString * const kDealCellId = @"dealCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDealCellId];
+    ShrekTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDealCellId];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDealCellId];
-        NSDictionary *deal = [self.model.deals objectAtIndex:[indexPath row]];
-        cell.textLabel.text = [deal objectForKey:@"title"];
+        cell = [[ShrekTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDealCellId];
     }
     
+    NSDictionary *deal = [self.model.deals objectAtIndex:[indexPath row]];
+    cell.dealLabel.text = [deal objectForKey:@"title"];
+    NSURL *imageURL = [NSURL URLWithString:[deal objectForKey:@"largeImageUrl"]];
+    UIImage *placeholderImage = [UIImage imageNamed:@"donkey.jpg"];
+    [cell.dealImage setImageWithURL:imageURL placeholderImage:placeholderImage];
+
     return cell;
 }
 
 
 #pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [ShrekTableViewCell cellHeight];
+}
 
 @end

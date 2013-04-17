@@ -45,6 +45,12 @@
 		F904F88D171F2483000AE627 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F87B171F2483000AE627 /* UIImageView+AFNetworking.m */; };
 		F904F88F171F2552000AE627 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F904F88E171F2552000AE627 /* SystemConfiguration.framework */; };
 		F904F891171F281F000AE627 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F904F890171F281F000AE627 /* MobileCoreServices.framework */; };
+		F904F895171F4B2B000AE627 /* donkey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F904F894171F4B2B000AE627 /* donkey.jpg */; };
+		F904F896171F4B2B000AE627 /* donkey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F904F894171F4B2B000AE627 /* donkey.jpg */; };
+		F904F898171F4F69000AE627 /* ShrekTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F904F897171F4F69000AE627 /* ShrekTableViewCellView.xib */; };
+		F904F899171F4F69000AE627 /* ShrekTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F904F897171F4F69000AE627 /* ShrekTableViewCellView.xib */; };
+		F904F89C171F5035000AE627 /* ShrekTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F89B171F5035000AE627 /* ShrekTableViewCell.m */; };
+		F904F89D171F5035000AE627 /* ShrekTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F904F89B171F5035000AE627 /* ShrekTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +109,10 @@
 		F904F87B171F2483000AE627 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		F904F88E171F2552000AE627 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F904F890171F281F000AE627 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F904F894171F4B2B000AE627 /* donkey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = donkey.jpg; sourceTree = "<group>"; };
+		F904F897171F4F69000AE627 /* ShrekTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShrekTableViewCellView.xib; sourceTree = "<group>"; };
+		F904F89A171F5035000AE627 /* ShrekTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShrekTableViewCell.h; sourceTree = "<group>"; };
+		F904F89B171F5035000AE627 /* ShrekTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShrekTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +182,9 @@
 				F904F7AF171F1EF0000AE627 /* ShrekViewController.h */,
 				F904F7B0171F1EF0000AE627 /* ShrekViewController.m */,
 				F904F7B2171F1EF0000AE627 /* ShrekViewController.xib */,
+				F904F897171F4F69000AE627 /* ShrekTableViewCellView.xib */,
+				F904F89A171F5035000AE627 /* ShrekTableViewCell.h */,
+				F904F89B171F5035000AE627 /* ShrekTableViewCell.m */,
 				F904F7D2171F1F83000AE627 /* ShrekModel.h */,
 				F904F7D3171F1F83000AE627 /* ShrekModel.m */,
 				F904F79E171F1EF0000AE627 /* Supporting Files */,
@@ -186,6 +199,7 @@
 				F904F7A0171F1EF0000AE627 /* InfoPlist.strings */,
 				F904F7A3171F1EF0000AE627 /* main.m */,
 				F904F7A5171F1EF0000AE627 /* Shrek-Prefix.pch */,
+				F904F894171F4B2B000AE627 /* donkey.jpg */,
 				F904F7A9171F1EF0000AE627 /* Default.png */,
 				F904F7AB171F1EF0000AE627 /* Default@2x.png */,
 				F904F7AD171F1EF0000AE627 /* Default-568h@2x.png */,
@@ -324,6 +338,8 @@
 				F904F7AC171F1EF0000AE627 /* Default@2x.png in Resources */,
 				F904F7AE171F1EF0000AE627 /* Default-568h@2x.png in Resources */,
 				F904F7B4171F1EF0000AE627 /* ShrekViewController.xib in Resources */,
+				F904F895171F4B2B000AE627 /* donkey.jpg in Resources */,
+				F904F898171F4F69000AE627 /* ShrekTableViewCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F904F7C6171F1EF0000AE627 /* InfoPlist.strings in Resources */,
+				F904F896171F4B2B000AE627 /* donkey.jpg in Resources */,
+				F904F899171F4F69000AE627 /* ShrekTableViewCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +389,7 @@
 				F904F888171F2483000AE627 /* AFURLConnectionOperation.m in Sources */,
 				F904F88A171F2483000AE627 /* AFXMLRequestOperation.m in Sources */,
 				F904F88C171F2483000AE627 /* UIImageView+AFNetworking.m in Sources */,
+				F904F89C171F5035000AE627 /* ShrekTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +408,7 @@
 				F904F889171F2483000AE627 /* AFURLConnectionOperation.m in Sources */,
 				F904F88B171F2483000AE627 /* AFXMLRequestOperation.m in Sources */,
 				F904F88D171F2483000AE627 /* UIImageView+AFNetworking.m in Sources */,
+				F904F89D171F5035000AE627 /* ShrekTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
