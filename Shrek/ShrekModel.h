@@ -12,6 +12,6 @@
 
 @property (nonatomic, readonly, strong) NSArray *deals;
 
-- (void)fetchDeals;
+- (void)fetchDealsWithSuccess:(void (^)())success failure:(void(^)(NSError *error))failure;
 
 @end

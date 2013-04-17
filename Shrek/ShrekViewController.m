@@ -13,6 +13,7 @@ static NSString * const kDealCellId = @"dealCell";
 
 @interface ShrekViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) ShrekModel *model;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation ShrekViewController
@@ -23,6 +24,13 @@ static NSString * const kDealCellId = @"dealCell";
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.model = [[ShrekModel alloc] init];
+    
+    [self.model fetchDealsWithSuccess:^{
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        [self.tableView reloadData];
+        // TODO: Put error handling in here
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +49,8 @@ static NSString * const kDealCellId = @"dealCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDealCellId];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDealCellId];
+        NSDictionary *deal = [self.model.deals objectAtIndex:[indexPath row]];
+        cell.textLabel.text = [deal objectForKey:@"title"];
     }
     
     return cell;
