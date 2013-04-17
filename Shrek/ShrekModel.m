@@ -37,10 +37,23 @@
                                                                                                 }
                                                                                             }
                                                                                             failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                                
                                                                                                 self.deals = nil;
                                                                                                 
-                                                                                                if (failure) {
-                                                                                                    failure(error);
+                                                                                                NSDictionary *errorInfo = [JSON objectForKey:@"error"];
+                                                                                                if (errorInfo) {
+                                                                                                    
+                                                                                                    if (failure) {
+                                                                                                        failure([NSError errorWithDomain:@"GrouponErrorDomain"
+                                                                                                                code:0
+                                                                                                                userInfo:@{NSLocalizedDescriptionKey : [errorInfo objectForKey:@"message"]}]);
+                                                                                                    }
+                                                                                                    
+                                                                                                } else {
+                                                                                                    
+                                                                                                    if (failure) {
+                                                                                                        failure(error);
+                                                                                                    }
                                                                                                 }
                                                                                             }];
     [httpClient enqueueHTTPRequestOperation:jsonOperation];

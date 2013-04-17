@@ -28,8 +28,12 @@ static NSString * const kDealCellId = @"dealCell";
     [self.model fetchDealsWithSuccess:^{
         [self.tableView reloadData];
     } failure:^(NSError *error) {
-        [self.tableView reloadData];
-        // TODO: Put error handling in here
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
     }];
 }
 
