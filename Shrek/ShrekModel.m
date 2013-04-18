@@ -37,26 +37,28 @@
                                                                                                 }
                                                                                             }
                                                                                             failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                                                                
-                                                                                                self.deals = nil;
-                                                                                                
-                                                                                                NSDictionary *errorInfo = [JSON objectForKey:@"error"];
-                                                                                                if (errorInfo) {
-                                                                                                    
-                                                                                                    if (failure) {
-                                                                                                        failure([NSError errorWithDomain:@"GrouponErrorDomain"
-                                                                                                                code:0
-                                                                                                                userInfo:@{NSLocalizedDescriptionKey : [errorInfo objectForKey:@"message"]}]);
-                                                                                                    }
-                                                                                                    
-                                                                                                } else {
-                                                                                                    
-                                                                                                    if (failure) {
-                                                                                                        failure(error);
-                                                                                                    }
-                                                                                                }
+                                                                                                [self showError:error JSON:JSON failure:failure];
                                                                                             }];
     [httpClient enqueueHTTPRequestOperation:jsonOperation];
 }
 
+- (void)showError:(NSError *)error JSON:(NSDictionary *)JSON failure:(void(^)(NSError *error))failure {
+    self.deals = nil;
+    
+    NSDictionary *errorInfo = [JSON objectForKey:@"error"];
+    if (errorInfo) {
+        
+        if (failure) {
+            failure([NSError errorWithDomain:@"GrouponErrorDomain"
+                                        code:0
+                                    userInfo:@{NSLocalizedDescriptionKey : [errorInfo objectForKey:@"message"]}]);
+        }
+        
+    } else {
+        
+        if (failure) {
+            failure(error);
+        }
+    }
+}
 @end
