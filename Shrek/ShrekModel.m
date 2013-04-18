@@ -43,7 +43,6 @@
 }
 
 - (void)showError:(NSError *)error JSON:(NSDictionary *)JSON failure:(void(^)(NSError *error))failure {
-    self.deals = nil;
     
     NSDictionary *errorInfo = [JSON objectForKey:@"error"];
     if (errorInfo) {
